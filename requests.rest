@@ -1,0 +1,22 @@
+DELETE http://localhost:3001/api/persons/1
+
+###
+GET http://localhost:3001/api/persons
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "New contact",
+    "number": "919-547-8526"
+}
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "",
+    "number": "919-547-8526"
+}
