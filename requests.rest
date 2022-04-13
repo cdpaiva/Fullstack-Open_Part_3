@@ -1,9 +1,16 @@
-DELETE http://localhost:3001/api/persons/1
-
-###
+### Fetches all documents
 GET http://localhost:3001/api/persons
 
-###
+### Access the info route
+GET http://localhost:3001/info
+
+### Bad request with a wrong id
+GET http://localhost:3001/api/persons/badId
+
+### Get request to a valid id
+GET http://localhost:3001/api/persons/6254e4a5abf2bbb2fdcd4a7c
+
+### Post request with a valid person
 POST http://localhost:3001/api/persons
 Content-Type: application/json
 
@@ -12,11 +19,20 @@ Content-Type: application/json
     "number": "919-547-8526"
 }
 
-###
+### Post request without content in the body
 POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
     "name": "",
     "number": "919-547-8526"
+}
+
+### Put request to a valid id
+PUT http://localhost:3001/api/persons/6254e4a5abf2bbb2fdcd4a7c
+Content-Type: application/json
+
+{
+    "name": "Changed Express name",
+    "number": "73645(new number)"
 }
